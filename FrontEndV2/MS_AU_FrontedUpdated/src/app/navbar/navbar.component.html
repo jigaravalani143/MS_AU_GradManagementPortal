@@ -1,0 +1,11 @@
+<mat-toolbar color="primary" class="mat-elevation-z6">
+    <span>Grad Management System</span>
+    <span class="example-spacer"></span>
+    <a mat-button routerLink="home">Home</a>
+    <a mat-button routerLink="/">Search</a>
+    <a mat-button routerLink="trends">Trends</a>
+    <a mat-button routerLink="logs">Operations Log</a>
+    <!-- <a mat-button>{{user.firstName}}</a> -->
+    <a mat-button>{{username}}</a>
+    <a mat-raised-button color="warn" (click)="signOut()">Sign Out</a>
+  </mat-toolbar>
