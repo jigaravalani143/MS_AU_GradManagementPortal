@@ -49,7 +49,7 @@ class GradRepoTest {
         Grad grad = EntityData.getGrad();
         Grad grad1 = gradRepo.save(grad);
 
-        List<Grad> grads= (List<Grad>) gradRepo.findAll();
+        List<Grad> grads= gradRepo.findAll();
         assertThat(grads).isNotNull();
 
 
@@ -70,7 +70,7 @@ class GradRepoTest {
     @Test
     void getYearLabels() {
         List<String> yearLabels=gradRepo.getYearLabels();
-        assertThat(yearLabels).containsExactlyInAnyOrder(new String[]{"2021"});
+        assertThat(yearLabels).containsExactlyInAnyOrder("2021");
 
     }
 }

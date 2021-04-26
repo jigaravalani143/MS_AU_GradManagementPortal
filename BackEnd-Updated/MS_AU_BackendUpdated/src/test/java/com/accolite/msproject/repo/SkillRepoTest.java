@@ -41,7 +41,7 @@ class SkillRepoTest {
     void findAll() {
 
 
-        List<Skill> skills= (List<Skill>) skillRepo.findAll();
+        List<Skill> skills= skillRepo.findAll();
         assertThat(skills).isNotNull();
 
 

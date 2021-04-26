@@ -29,7 +29,7 @@ class InstituteRepoTest {
     void findAll() {
 
 
-        List<Institute> institutes= (List<Institute>) instituteRepo.findAll();
+        List<Institute> institutes= instituteRepo.findAll();
         assertThat(institutes).isNotNull();
 
 

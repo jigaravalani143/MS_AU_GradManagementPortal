@@ -40,7 +40,7 @@ class LocationRepoTest {
     void findAll() {
 
 
-        List<Location> locationList= (List<Location>) locationRepo.findAll();
+        List<Location> locationList= locationRepo.findAll();
         assertThat(locationList).isNotNull();
 
 

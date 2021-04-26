@@ -1,10 +1,8 @@
 package com.accolite.msproject;
 
-import com.accolite.msproject.model.Grad;
-import com.accolite.msproject.model.Institute;
-import com.accolite.msproject.model.Location;
-import com.accolite.msproject.model.Skill;
+import com.accolite.msproject.model.*;
 
+import java.sql.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -41,7 +39,18 @@ public class EntityData {
         grad.setSkills(skillSet);
         return grad;
     }
-
+    public static Audit setAuditObj()
+    {
+        Audit audit = new Audit();
+        audit.setId(1);
+        audit.setUserName("jigar");
+        audit.setUserEmail("jigar.avalani@accolitedigital.com");
+        audit.setDate(new Date(System.currentTimeMillis()));
+        audit.setOperation("Get");
+        audit.setNewValues("New Val");
+        audit.setOldValues("Old Val");
+        return audit;
+    }
 
 
 }
