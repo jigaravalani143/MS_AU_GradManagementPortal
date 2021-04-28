@@ -43,6 +43,8 @@ import { LineChartComponent } from './line-chart/line-chart.component';
 import { DoughnutChartComponent } from './doughnut-chart/doughnut-chart.component';
 import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { BubbleChartComponent } from './bubble-chart/bubble-chart.component';
+import {AddComponent} from './add/add.component';
+
 
 @NgModule({
   declarations: [
@@ -62,6 +64,7 @@ import { BubbleChartComponent } from './bubble-chart/bubble-chart.component';
     BarChartComponent,
     BubbleChartComponent,
     HomeComponent,
+    AddComponent,
   ],
   imports: [
     BrowserModule,
@@ -101,7 +104,8 @@ import { BubbleChartComponent } from './bubble-chart/bubble-chart.component';
           {
             id: GoogleLoginProvider.PROVIDER_ID,
             provider: new GoogleLoginProvider(
-              '380624528874-itvbv8per9dgrm8i69ud9k0k89jje9r3.apps.googleusercontent.com'
+              '304772065495-3uuv1o8acn6oeteh8dsqg1gqhqa1q9lt.apps.googleusercontent.com'
+              
             )
           }
         ]

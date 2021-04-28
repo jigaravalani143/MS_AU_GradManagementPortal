@@ -7,7 +7,7 @@ import { LogsComponent } from './logs/logs.component';
 import { SearchComponent } from './search/search.component';
 import { TrendsComponent } from './trends/trends.component';
 import {HomeComponent} from './home/home.component';
-
+import {AddComponent} from './add/add.component';
 const routes: Routes = [
 {path: 'dashboard',
 component:DashboardComponent,
@@ -16,6 +16,7 @@ children:[
   {path:'trends',component:TrendsComponent},
   {path:'logs',component:LogsComponent},
   {path:'home',component:HomeComponent},
+  {path:'add',component:AddComponent},
 ]
 ,
 canActivate:[AuthGuardGuard]

@@ -22,15 +22,13 @@ export class BarChartComponent implements OnInit {
   selectedParam: string;
   selectedCar: string;
   xParamVal:String[]=[];
-  xParamOptions:String[]=['skill','institute','joining location'
- ,'join year'
-]
+  xParamOptions:String[]=['skill','institute','joining location','join year']
 
   
   constructor(private gradService:GradService){}
   ngOnInit(): void {
-    this.selectedParam="joining location";
-   this.getLabels("joining location");
+    this.selectedParam="skill";
+   this.getLabels("skill");
 
   }
  
@@ -45,7 +43,10 @@ export class BarChartComponent implements OnInit {
   barChartPlugins = [];
 
   barChartData: ChartDataSets[] = [
-    { data: [2500], label: 'Company A'},
+    { data: [2500], label: 'Company A',
+    backgroundColor: "rgba(0,60,100,1)",
+    borderColor: "black",
+  fill:"rgba(0,60,100,1)"},
   ];
 
 

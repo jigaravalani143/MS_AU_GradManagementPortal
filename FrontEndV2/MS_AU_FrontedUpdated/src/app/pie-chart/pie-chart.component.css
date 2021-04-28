@@ -1,7 +1,7 @@
 .box{
     background-color: white;
     width: 100%;
-    display: flex;
+    /* display: flex; */
     height: 100%;
  }
  .sec1{
@@ -9,7 +9,7 @@
  
      margin-left: 10px;
      margin-top: 10px;
-     height: 90vh;
+     /* height: 90vh; */
      margin-right: 10px;
      width: 20%;
  
@@ -17,7 +17,7 @@
  .sec2{
      margin-left: 10px;
      margin-top: 10px;
-     height: 90vh;
+     /* height: 90vh; */
      margin-right: 10px;
      width: 100%;
  }

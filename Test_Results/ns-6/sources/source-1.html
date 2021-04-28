@@ -1,0 +1,131 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > Queries</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+    @import "../../.css/highlight-idea.css";
+  </style>
+  <script type="text/javascript" src="../../.js/highlight.pack.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.accolite.msproject.util</a>
+</div>
+
+<h1>Coverage Summary for Class: Queries (com.accolite.msproject.util)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Queries</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.accolite.msproject.util;
+<i class="no-highlight">2</i>&nbsp;
+<b class="nc"><i class="no-highlight">3</i>&nbsp;public  class Queries {</b>
+<i class="no-highlight">4</i>&nbsp;
+<i class="no-highlight">5</i>&nbsp;    //jpa queries
+<i class="no-highlight">6</i>&nbsp;    public static final String SKILL_LABEL=&quot;select s.name from Skill s&quot;;
+<i class="no-highlight">7</i>&nbsp;    public static final String LOC_LABEL=&quot;select l.name from Location l&quot;;
+<i class="no-highlight">8</i>&nbsp;    public static final String INSTI_LABEL=&quot;select i.name from Institute i&quot;;
+<i class="no-highlight">9</i>&nbsp;    public static final String YEAR_LABEL=&quot;select year(ten_join_date) as year from Grad group by year&quot;;
+<i class="no-highlight">10</i>&nbsp;    //pie chart queries
+<i class="no-highlight">11</i>&nbsp;    public static final String SKILL_PIE_DATA=&quot;select (count(*)*100/(Select Count(*) From grad_skills)) from grad_skills group by skills_id&quot;;
+<i class="no-highlight">12</i>&nbsp;    public static final String INSTI_PIE_DATA=&quot;select (count(*)*100/(Select Count(*) From grad)) from grad group by institute_id&quot;;
+<i class="no-highlight">13</i>&nbsp;    public static final String LOC_PIE_DATA=&quot;select (count(*)*100/(Select Count(*) From grad)) from grad group by join_loc_id&quot;;
+<i class="no-highlight">14</i>&nbsp;    public static final String YEAR_PIE_DATA=&quot;select (count(id)*100/(Select Count(*) From grad)) from grad group by (select year(ten_join_date) as year)&quot;;
+<i class="no-highlight">15</i>&nbsp;    //bar chart queries
+<i class="no-highlight">16</i>&nbsp;    public static final String SKILL_BAR_DATA=&quot;select count(*) from grad_skills group by skills_id&quot;;
+<i class="no-highlight">17</i>&nbsp;    public static final String INSTI_BAR_DATA=&quot;select count(*) from Grad group by institute_id&quot;;
+<i class="no-highlight">18</i>&nbsp;    public static final String LOC_BAR_DATA=&quot;select count(*) from grad group by join_loc_id&quot;;
+<i class="no-highlight">19</i>&nbsp;    public static final String YEAR_BAR_DATA=&quot;select count(*) from Grad  group by (select year(ten_join_date) as year)&quot;;
+<i class="no-highlight">20</i>&nbsp;    //Labels
+<i class="no-highlight">21</i>&nbsp;    public static final String SKILL_L=&quot;skill&quot;;
+<i class="no-highlight">22</i>&nbsp;    public static final String INSTI_L=&quot;institute&quot;;
+<i class="no-highlight">23</i>&nbsp;    public static final String YEAR_L=&quot;join year&quot;;
+<i class="no-highlight">24</i>&nbsp;    public static final String GRAD_L=&quot;Graduates&quot;;
+<i class="no-highlight">25</i>&nbsp;}
+<i class="no-highlight">26</i>&nbsp;
+</div>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+        var codeBlock = document.getElementById('sourceCode');
+
+        if (codeBlock) {
+            hljs.highlightBlock(codeBlock);
+        }
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2021-04-28 22:00</div>
+</div>
+</body>
+</html>

@@ -64,4 +64,13 @@ div.span:hover {
     justify-content: left;
   }
   
-  
+  .welcome-text{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: xx-large;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 30px;
+  }

@@ -20,7 +20,7 @@ import { DetailGradComponent } from '../detail-grad/detail-grad.component';
 })
 
 export class SearchComponent implements OnInit  {
-  displayedColumns: string[] = [ 'name','institute','skills','ten_join_date','join_loc','actions'];
+  displayedColumns: string[] = [ 'name','email','institute','ten_join_date','join_loc','actions'];
   grads: MatTableDataSource<Grad> ;
 
   @ViewChild(MatPaginator) paginator: MatPaginator ;
@@ -73,7 +73,7 @@ onAddClick(){
   dialogConfig.width = "50%";
   dialogConfig.data = {
     id: 1,
-    title: 'Add New Grad'
+    title: 'Add New Candidate'
 };
   this.dialog.open(AddGradComponent,dialogConfig);
   this.dialog.afterAllClosed.subscribe((res)=>{
@@ -86,7 +86,7 @@ onUpdateClick(row){
   const dialogConfig = new MatDialogConfig();
   dialogConfig.data = {
     id: 3,
-    title: 'Update Grad'
+    title: 'Update Candidate'
 };
   dialogConfig.disableClose = true;
   dialogConfig.autoFocus = true;

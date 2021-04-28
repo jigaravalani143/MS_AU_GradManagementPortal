@@ -1,7 +1,41 @@
+<div class="box">
+    <div>
+        <form>
+            <h4><b>Doughnut Chart</b></h4>
+            <div class="horizontal">
+            <div>
+            <mat-form-field appearance="fill">
+              <mat-label>Select Parameter</mat-label>
+              <mat-select [(ngModel)]="selectedParam" name="food">
+                <mat-option *ngFor="let op of xParamOptions" [value]="op">
+                  {{op}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+        </div>
+            <div class=" marbtn"mat-dialog-actions>
+              
+                <button mat-raised-button color="warn" (click)="onShow()" type="submit">Submit</button>
+              </div>
+            </div>
+          
+    </form>
+    </div>
+    <div class="sec2">
+  
 <div class="chartjs-container">
-    <canvas baseChart 
-    [data]="doughnutChartData" 
-    [labels]="doughnutChartLabels" 
-    [chartType]="doughnutChartType">
+    <canvas 
+        baseChart 
+        [data]="doughnutChartData" 
+        [labels]="doughnutChartLabels" 
+        [chartType]="doughnutChartType"
+        [options]="doughnutChartOptions" 
+        [plugins]="doughnutChartPlugins" 
+        [colors]="doughnutChartColors" 
+        [legend]="doughnutChartLegend">
     </canvas>
+</div>
+
+    </div>
+   
 </div>

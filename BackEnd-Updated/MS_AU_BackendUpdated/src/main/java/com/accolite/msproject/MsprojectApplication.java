@@ -71,9 +71,9 @@ public class MsprojectApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
-		String [] locArray=new String[]{"Mumbai","Delhi","Bangalore","Chennai","Other"};
-		String [] instrArray=new String[]{"DJ","KJ","MJ","LJ","Other"};
-		String [] skillArray=new String[]{"Java","Angular","Android","Spring","Other"};
+		String [] locArray=new String[]{"Mumbai","Bangalore","Delhi","Hyderabad","Chennai","Other"};
+		String [] instrArray=new String[]{"DJSCE","SPIT","KJSCE","TECT","VJTI","Other"};
+		String [] skillArray=new String[]{"Java","Spring","Angular","React","Mysql","Other"};
 
 
 		for(int i=0;i<locArray.length;i++){
@@ -97,12 +97,12 @@ public class MsprojectApplication implements CommandLineRunner {
 			grad.setLoc(new Location(i+1, locArray[i]));
 			grad.setInstitute(new Institute(i+1, instrArray[i]));
 			grad.setJoin_loc(new Location(i+1, locArray[i]));
-			grad.setContact("9082177574");
-			grad.setDescription("desc.....");
-			grad.setFeedback("feed...");
-			grad.setName("Grad" + i+1);
-			grad.setEmail("grad" + i+1 + "@gmail.com");
-			grad.setTen_join_date("2021-03-11");
+			grad.setContact("0123456789");
+			grad.setDescription("SDE Full time");
+			grad.setFeedback("Excellent");
+			grad.setName("Stefan" + i+1);
+			grad.setEmail("stefan" + i+1 + "@gmail.com");
+			grad.setTen_join_date("2021-06-15");
 			Set<Skill> skillSet = new HashSet<>();
 			skillSet.add(new Skill(i+1, skillArray[i]));
 			skillSet.add(new Skill(i+1+ 1, skillArray[i + 1]));

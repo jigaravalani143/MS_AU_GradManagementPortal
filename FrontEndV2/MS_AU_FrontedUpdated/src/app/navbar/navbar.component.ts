@@ -20,6 +20,9 @@ export class NavbarComponent implements OnInit {
     this.username = localStorage.getItem('userName');
   }
 
+
+
+  
   ngOnInit(): void {
     this.username = localStorage.getItem('userName');
     // this.authService.authState.subscribe((user)=>{
@@ -43,4 +46,5 @@ export class NavbarComponent implements OnInit {
     //   console.log(error); // Error!
     // });
   }
+
 }

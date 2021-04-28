@@ -12,6 +12,7 @@
         <mat-label>Name</mat-label>
         <input formControlName="name"  matInput placeholder="Jigar Avalani">
         <mat-error>This field is mandatory.</mat-error>
+        <mat-icon matSuffix>person_outline</mat-icon>
     </mat-form-field>
     </div>
     <div>
@@ -19,6 +20,7 @@
         <mat-label>Email</mat-label>
         <input type="email" formControlName="email" matInput placeholder="jigar@gmail.com">
         <mat-error>This field is mandatory.</mat-error>
+        <mat-icon  matSuffix>alternate_email</mat-icon>
       </mat-form-field>
     </div>
     <div>
@@ -28,13 +30,15 @@
             <mat-error *ngIf="gradService.form.controls['contact'].errors?.required">This field is mandatory.</mat-error>
           <mat-error *ngIf="gradService.form.controls['contact'].errors?.minlength">Minimum 8 charactors needed.</mat-error>
           <mat-error *ngIf="gradService.form.controls['contact'].errors?.maxlength">Maximum 10 charactors needed.</mat-error>
-          </mat-form-field>
+          <mat-icon matSuffix> call</mat-icon>  
+        </mat-form-field>
     </div>
     <div>
         <mat-form-field class="input-div"appearance="fill">
             <mat-label>Description</mat-label>
             <input  formControlName="description" matInput placeholder=".......">
             <mat-error>This field is mandatory.</mat-error>
+            <mat-icon matSuffix>description</mat-icon>
           </mat-form-field>
     </div>
     <div>
@@ -42,6 +46,7 @@
             <mat-label>Feedback</mat-label>
             <input formControlName="feedback" matInput placeholder=".......">
             <mat-error>This field is mandatory.</mat-error>
+            <mat-icon matSuffix>feedback</mat-icon>
           </mat-form-field>
     </div>
     <div>

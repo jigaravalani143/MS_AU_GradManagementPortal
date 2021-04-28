@@ -93,7 +93,8 @@ export class LogsComponent implements OnInit {
 //     this.getGrads();
 //   });
 // }
-// onInfoClick(row){
+// onInfoClick(row)
+// {
 //   console.log(JSON.stringify(row))
 //   this.gradService.populateForm(row,row.id);
 //   const dialogConfig = new MatDialogConfig();
@@ -103,7 +104,7 @@ export class LogsComponent implements OnInit {
 //   dialogConfig.disableClose = true;
 //   dialogConfig.autoFocus = true;
 //   dialogConfig.width = "50%";
-//   this.dialog.open(DetailGradComponent,dialogConfig);
+//   this.dialog.open(LogDetailsComponent,dialogConfig);
   
 // }
 // onDeleteClick(grad){

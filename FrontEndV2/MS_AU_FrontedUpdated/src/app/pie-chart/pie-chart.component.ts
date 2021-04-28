@@ -13,9 +13,7 @@ import { GradService } from '../grad.service';
 export class PieChartComponent implements OnInit {
  
   selectedParam: string;
-  xParamOptions:String[]=['skill','institute','joining location'
- ,'join year'
-]
+  xParamOptions:String[]=['skill','institute','joining location','join year']
 
 constructor(private gradService:GradService){}
   pieChartOptions: ChartOptions = {
@@ -48,12 +46,12 @@ constructor(private gradService:GradService){}
 
   pieChartColors = [
     {
-      backgroundColor: ['rgba(255,0,0,0.3)', 'rgba(0,255,0,0.3)', 'rgba(0,0,255,0.3)'],
+      backgroundColor: ['rgba(255,0,0,0.3)', 'rgba(0,255,0,0.3)', 'rgba(0,0,255,0.3)','rgba(255,255,0,0.3)',,'rgb(255,165,0,0.5)'],
     },
   ];
   ngOnInit(): void {
-    this.selectedParam="joining location";
-    this.getLabels("joining location");
+    this.selectedParam="institute";
+    this.getLabels("institute");
   }
   onShow(){
     if(this.selectedParam==="skill")
