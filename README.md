@@ -13,7 +13,7 @@
 - MySql
 
 ## Demo Video
-- [MS AU Grad Management Portal Demo Video](https://github.com/DishaSurana/MS-GradManagement-Project/tree/master/Backend/gradManagement/src)
+- [MS AU Grad Management Portal Demo Video](https://drive.google.com/file/d/1NekIK34j5sVjX4bOHpAIvwH5ZnoIxcOm/view?usp=sharing)
 
 ## Screenshots
 [Grad Management Portal Screenshots](GradManagement_ScreenShots.pdf)
