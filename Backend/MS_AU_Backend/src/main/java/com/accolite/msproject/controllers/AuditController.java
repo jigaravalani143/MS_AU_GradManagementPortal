@@ -14,6 +14,8 @@ public class AuditController {
     @Autowired
     AuditServiceImpl auditServiceImpl;
 
+    //Get the user operations log for audit from audit table
+
     @GetMapping(value = "/getAll")
     public List<Audit> getAllAudit()
     {
@@ -21,6 +23,8 @@ public class AuditController {
         auditList = auditServiceImpl.getAllAudit();
         return auditList;
     }
+
+    //Add the operations log entry in the audit table
 
     @PostMapping(value = "/addAudit")
     public int addAudit(@RequestBody Audit audit)

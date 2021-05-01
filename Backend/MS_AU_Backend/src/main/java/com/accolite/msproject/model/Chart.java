@@ -4,6 +4,9 @@ import java.io.Serializable;
 import java.util.List;
 
 public class Chart implements Serializable {
+    //Chart class defines the label of the graph with the chart data to be plotted
+    //{"labels":["Java","Spring","Angular","React","Mysql","Other"],"chartData":{"label":"Graduates","data":[20,20,20,20,20]}}
+
     List<String> labels;
     ChartData chartData;
 

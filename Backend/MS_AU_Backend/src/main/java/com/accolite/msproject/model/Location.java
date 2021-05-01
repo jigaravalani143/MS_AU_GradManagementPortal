@@ -5,6 +5,8 @@ import java.io.Serializable;
 
 @Entity
 public class Location implements Serializable {
+    //Location class generated a table named location with fields id and name in DB
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

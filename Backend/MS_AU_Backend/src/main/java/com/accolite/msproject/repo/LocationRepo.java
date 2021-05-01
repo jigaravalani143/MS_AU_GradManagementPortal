@@ -14,6 +14,8 @@ import static com.accolite.msproject.util.Queries.LOC_LABEL;
 @Repository
 @Transactional
 public interface LocationRepo extends JpaRepository<Location,Integer> {
+    ////Retrieves the label for joining location of grads to plot on charts
+
     @Query(LOC_LABEL)
     List<String> getLabels();
 }

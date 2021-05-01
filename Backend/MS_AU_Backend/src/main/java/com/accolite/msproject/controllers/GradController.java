@@ -22,19 +22,23 @@ public class GradController {
     @Autowired
     private AuditService auditService;
 
+    //Method to fetch all the grads in the grad table and return type is as an response entity
 
     @GetMapping("/all")
     public ResponseEntity<List<Grad>> getAllGrads(){
         List<Grad> grads=gradService.findAllGrads();
-
         return new ResponseEntity<>(grads, HttpStatus.OK);
     }
+
+    //Method to fetch the grad by its id from the grad table and return type is as an response entity
 
     @GetMapping("/find/{id}")
     public ResponseEntity<Grad> getGradById(@PathVariable("id") Integer id){
         Grad grad=gradService.findGradById(id);
         return new ResponseEntity<>(grad, HttpStatus.OK);
     }
+
+    //Method to add a grad in the grad table with the users email and name (for audit) and return type is as an response entity
 
     @PostMapping("/add")
     @CrossOrigin("http://localhost:4200")
@@ -45,6 +49,8 @@ public class GradController {
         return new ResponseEntity<>(newGrad,HttpStatus.CREATED);
     }
 
+    //Method to update a grad in the grad table with the users email and name (for audit) and return type is as an response entity
+
     @PutMapping("/update")
     @CrossOrigin("http://localhost:4200")
     public ResponseEntity<Grad> updateGrad(@RequestBody Grad grad,@RequestHeader(value = "Email") String email,@RequestHeader(value = "Name") String userName)
@@ -54,6 +60,8 @@ public class GradController {
         Grad updatedGrad=gradService.updateGrad(grad);
         return new ResponseEntity<>(updatedGrad,HttpStatus.OK);
     }
+
+    //Method to delete a grad in the grad table with the users email and name (for audit) and return type is as an response entity
 
     @DeleteMapping("/delete/{id}")
     @CrossOrigin("http://localhost:4200")

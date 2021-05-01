@@ -14,6 +14,8 @@ import static com.accolite.msproject.util.Queries.SKILL_LABEL;
 @Repository
 @Transactional
 public interface SkillRepo extends JpaRepository<Skill,Integer> {
+    //Retrieves the label for skills of grads to plot on charts
+
     @Query(SKILL_LABEL)
     List<String> getLabels();
 

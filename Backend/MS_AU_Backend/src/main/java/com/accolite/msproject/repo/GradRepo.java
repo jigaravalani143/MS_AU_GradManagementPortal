@@ -15,6 +15,8 @@ import static com.accolite.msproject.util.Queries.YEAR_LABEL;
 public interface GradRepo extends JpaRepository<Grad,Integer> {
     Optional<Grad> findGradById(Integer id);
 
+    //Retrieves the label for joining year of grads to plot on charts
+
     @Query(YEAR_LABEL)
     List<String> getYearLabels();
 }

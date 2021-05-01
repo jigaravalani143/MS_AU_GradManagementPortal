@@ -20,7 +20,7 @@ import { DetailGradComponent } from '../detail-grad/detail-grad.component';
 })
 
 export class SearchComponent implements OnInit  {
-  displayedColumns: string[] = [ 'name','email','institute','ten_join_date','join_loc','actions'];
+  displayedColumns: string[] = [ 'name','email','institute','ten_join_date','join_loc','skills', 'description','actions'];
   grads: MatTableDataSource<Grad> ;
 
   @ViewChild(MatPaginator) paginator: MatPaginator ;

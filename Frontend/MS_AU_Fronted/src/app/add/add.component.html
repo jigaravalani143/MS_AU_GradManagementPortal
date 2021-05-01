@@ -10,7 +10,7 @@
       </div>
       <div>
       <mat-form-field class="input-div"appearance="fill">
-          <mat-label>Name</mat-label>
+          <mat-label>Name <span class="astrick-color">*</span></mat-label>
           <input formControlName="name"  matInput placeholder="Jigar Avalani">
           <mat-error>This field is mandatory.</mat-error>
           <mat-icon matSuffix>person_outline</mat-icon>
@@ -18,7 +18,7 @@
       </div>
       <div>
       <mat-form-field class="input-div"appearance="fill">
-          <mat-label>Email</mat-label>
+          <mat-label>Email <span class="astrick-color">*</span></mat-label>
           <input type="email" formControlName="email" matInput placeholder="jigar@gmail.com">
           <mat-error *ngIf="gradService.form.controls['email'].errors?.required">This field is mandatory.</mat-error>
           <mat-error *ngIf="gradService.form.controls['email'].errors?.email">Enter a proper email id</mat-error>
@@ -27,7 +27,7 @@
       </div>
       <div>
           <mat-form-field class="input-div"appearance="fill">
-              <mat-label>Contact</mat-label>
+              <mat-label>Contact <span class="astrick-color">*</span></mat-label>
               <input formControlName="contact" type="tel" matInput placeholder="9967643175">
               <mat-error *ngIf="gradService.form.controls['contact'].errors?.required">This field is mandatory.</mat-error>
             <mat-error *ngIf="gradService.form.controls['contact'].errors?.minlength">Minimum 8 charactors needed.</mat-error>
@@ -37,7 +37,7 @@
       </div>
       <div>
           <mat-form-field class="input-div"appearance="fill">
-              <mat-label>Description</mat-label>
+              <mat-label>Description <span class="astrick-color">*</span></mat-label>
               <input  formControlName="description" matInput placeholder="FTE, SDE, Intern, etc.">
               <mat-error>This field is mandatory.</mat-error>
               <mat-icon matSuffix>description</mat-icon>
@@ -45,7 +45,7 @@
       </div>
       <div>
           <mat-form-field class="input-div"appearance="fill">
-              <mat-label>Feedback</mat-label>
+              <mat-label>Feedback <span class="astrick-color">*</span></mat-label>
               <input formControlName="feedback" matInput placeholder="Good, Average, Excellent, etc.">
               <mat-error>This field is mandatory.</mat-error>
               <mat-icon matSuffix>feedback</mat-icon>
@@ -53,14 +53,14 @@
       </div>
       <div>
           <mat-form-field class="input-div"appearance="fill">
-              <mat-label>Ten Join Date</mat-label>
+              <mat-label>Ten Join Date <span class="astrick-color">*</span></mat-label>
               <input  formControlName="ten_join_date" type="date" matInput placeholder="">
               <mat-error>This field is mandatory.</mat-error>
             </mat-form-field>
       </div>
       <div>
       <mat-form-field class="input-div" appearance="fill">
-        <mat-label>Joining Location</mat-label>
+        <mat-label>Joining Location <span class="astrick-color">*</span></mat-label>
         <mat-select [compareWith]="objectComparisonFunction" formControlName="join_loc">
           <mat-option *ngFor="let loc of locations" [value]="loc">
             {{loc.name}}
@@ -70,7 +70,7 @@
       </div>
       <div>
         <mat-form-field class="input-div" appearance="fill">
-          <mat-label>Home Location</mat-label>
+          <mat-label>Home Location <span class="astrick-color">*</span></mat-label>
           <mat-select [compareWith]="objectComparisonFunction" formControlName="loc">
             <mat-option *ngFor="let loc of locations" [value]="loc">
               {{loc.name}}
@@ -80,7 +80,7 @@
             </div>
             <div>
               <mat-form-field class="input-div" appearance="fill">
-                <mat-label>Institute</mat-label>
+                <mat-label>Institute <span class="astrick-color">*</span></mat-label>
                 <mat-select  [compareWith]="objectComparisonFunction" formControlName="institute">
                   <mat-option *ngFor="let insti of institutes" [value]="insti">
                     {{insti.name}}

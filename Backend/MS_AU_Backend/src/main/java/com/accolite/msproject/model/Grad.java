@@ -8,6 +8,9 @@ import java.util.Set;
 
 @Entity
 public class Grad implements Serializable {
+
+    //Grad class creates a table Grad with the variables declared below, specifies the relational cardinatlity mapping, foreign key mapping
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

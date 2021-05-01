@@ -14,6 +14,8 @@ import static com.accolite.msproject.util.Queries.INSTI_LABEL;
 @Repository
 @Transactional
 public interface InstituteRepo extends JpaRepository<Institute,Integer> {
+    //Retrieves the label for institutes of grads to plot on charts
+
     @Query(INSTI_LABEL)
     List<String> getLabels();
 }

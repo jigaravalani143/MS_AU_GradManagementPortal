@@ -3,7 +3,7 @@
   <div class="welcome-text"> Search Grads </div>
 
       <mat-form-field class="search-form-field" floatLabel="never" appearance="outline"> 
-     <input  matInput type="text" [(ngModel)]="searchKey" placeholder="Search" autocomplete="off" (keyup)="applyFilter()">
+     <input  matInput type="text" [(ngModel)]="searchKey" placeholder="Search available on all the parameters" autocomplete="off" (keyup)="applyFilter()">
     <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="onSearchClear()">
         <mat-icon>close</mat-icon>
     </button>  
@@ -16,35 +16,49 @@
         
       <ng-container matColumnDef="name">
             <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
-            <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+            <mat-cell *matCellDef="let element" class="operation-cell"> {{element.name}} </mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="email">
           <mat-header-cell *matHeaderCellDef mat-sort-header>Email</mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.email}} </mat-cell>
+          <mat-cell *matCellDef="let element" class="operation-cell"> {{element.email}} </mat-cell>
       </ng-container>
 
         <ng-container matColumnDef="institute">
           <mat-header-cell *matHeaderCellDef mat-sort-header>Institute</mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.institute.name}} </mat-cell>
+          <mat-cell *matCellDef="let element" class="operation-cell"> {{element.institute.name}} </mat-cell>
       </ng-container>
 
     <ng-container matColumnDef="ten_join_date">
       <mat-header-cell *matHeaderCellDef mat-sort-header>Joining Date</mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.ten_join_date}} </mat-cell>
+      <mat-cell *matCellDef="let element" class="operation-cell"> {{element.ten_join_date}} </mat-cell>
    </ng-container>
  
    <ng-container matColumnDef="join_loc">
     <mat-header-cell *matHeaderCellDef mat-sort-header>Joining Location</mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.join_loc.name}} </mat-cell>
+    <mat-cell *matCellDef="let element" class="operation-cell"> {{element.join_loc.name}} </mat-cell>
+</ng-container>
+
+<ng-container  matColumnDef="skills">
+  <mat-header-cell *matHeaderCellDef mat-sort-header>Skills</mat-header-cell>
+  <mat-cell class="break" *matCellDef="let element"> 
+    <span class="break">
+    <span class="operation-cell" *ngFor="let skill of element.skills">{{skill.name}}</span>
+  </span> 
+  </mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="description">
+  <mat-header-cell *matHeaderCellDef mat-sort-header>Description</mat-header-cell>
+  <mat-cell *matCellDef="let element" class="operation-cell"> {{element.description}} </mat-cell>
 </ng-container>
 
           <ng-container class="actions" matColumnDef="actions">
             <mat-header-cell *matHeaderCellDef>Operations</mat-header-cell>
             <mat-cell *matCellDef="let row">
-               <button (click)="onInfoClick(row)" mat-raised-button color="primary">Details</button>
-                <button (click)="onUpdateClick(row)" mat-raised-button color="accent">Update</button> 
-                <button (click)="onDeleteClick(row)" mat-raised-button color="warn">Delete</button>    
+               <button (click)="onInfoClick(row)" mat-button color="primary"><mat-icon>info</mat-icon></button>
+                <button (click)="onUpdateClick(row)" mat-button color="accent"><mat-icon>edit</mat-icon></button> 
+                <button (click)="onDeleteClick(row)" mat-button color="warn"><mat-icon>delete_forever</mat-icon></button>    
             </mat-cell>
           </ng-container>
           <ng-container matColumnDef="loading">

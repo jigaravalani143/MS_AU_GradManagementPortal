@@ -73,39 +73,38 @@ public class MsprojectApplication implements CommandLineRunner {
 		String [] instrArray=new String[]{"DJSCE","SPIT","KJSCE","TECT","VJTI","Other"};
 		String [] skillArray=new String[]{"Java","Spring","Angular","React","Mysql","Other"};
 
+		for(int i=0;i<locArray.length;i++){
+				if(!locationRepo.existsById(i+1)){
+					locationRepo.save(new Location(i+1,locArray[i]));
+				}
+				if(!instituteRepo.existsById(i+1)){
+				instituteRepo.save(new Institute(i+1,instrArray[i]));
+				}
+				if(!skillRepo.existsById(i+1)){
+					skillRepo.save(new Skill(i+1,skillArray[i]));
+				}
 
-//		for(int i=0;i<locArray.length;i++){
-//				if(!locationRepo.existsById(i+1)){
-//					locationRepo.save(new Location(i+1,locArray[i]));
-//				}
-//				if(!instituteRepo.existsById(i+1)){
-//				instituteRepo.save(new Institute(i+1,instrArray[i]));
-//				}
-//				if(!skillRepo.existsById(i+1)){
-//					skillRepo.save(new Skill(i+1,skillArray[i]));
-//				}
-//
-//			}
-//
-//		int i=0;
+			}
 
-//		if(!gradRepo.existsById(i+1)) {
-//			Grad grad = new Grad();
-//			grad.setId(i+1);
-//			grad.setLoc(new Location(i+1, locArray[i]));
-//			grad.setInstitute(new Institute(i+1, instrArray[i]));
-//			grad.setJoin_loc(new Location(i+1, locArray[i]));
-//			grad.setContact("0123456789");
-//			grad.setDescription("SDE Full time");
-//			grad.setFeedback("Excellent");
-//			grad.setName("Stefan" + i+1);
-//			grad.setEmail("stefan" + i+1 + "@gmail.com");
-//			grad.setTen_join_date("2021-06-15");
-//			Set<Skill> skillSet = new HashSet<>();
-//			skillSet.add(new Skill(i+1, skillArray[i]));
-//			skillSet.add(new Skill(i+1+ 1, skillArray[i + 1]));
-//			grad.setSkills(skillSet);
-//			gradRepo.save(grad);
-//		}
+		int i=0;
+
+		if(!gradRepo.existsById(i+1)) {
+			Grad grad = new Grad();
+			grad.setId(i+1);
+			grad.setLoc(new Location(i+1, locArray[i]));
+			grad.setInstitute(new Institute(i+1, instrArray[i]));
+			grad.setJoin_loc(new Location(i+1, locArray[i]));
+			grad.setContact("0123456789");
+			grad.setDescription("SDE Full time");
+			grad.setFeedback("Excellent");
+			grad.setName("Stefan" + i+1);
+			grad.setEmail("stefan" + i+1 + "@gmail.com");
+			grad.setTen_join_date("2021-06-15");
+			Set<Skill> skillSet = new HashSet<>();
+			skillSet.add(new Skill(i+1, skillArray[i]));
+			skillSet.add(new Skill(i+1+ 1, skillArray[i + 1]));
+			grad.setSkills(skillSet);
+			gradRepo.save(grad);
+		}
 		}
 }

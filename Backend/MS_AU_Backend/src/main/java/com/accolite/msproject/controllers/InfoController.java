@@ -41,11 +41,15 @@ public class InfoController {
     @PersistenceContext
     private EntityManager entityManager;
 
+    //Method to get list of all institutes from the institute table
+
     @GetMapping("/allInsti")
     public ResponseEntity<List<Institute>> getAllInstitute(){
         List<Institute> institutes=instituteRepo.findAll();
         return new ResponseEntity<>(institutes, HttpStatus.OK);
     }
+
+    //Method to get list of all locations from the location table
 
     @GetMapping("/allLoc")
     public ResponseEntity<List<Location>> getAllLocations(){
@@ -53,11 +57,16 @@ public class InfoController {
         return new ResponseEntity<>(locations, HttpStatus.OK);
     }
 
+    //Method to get list of all skills from the skills table
+
     @GetMapping("/allSkill")
     public ResponseEntity<List<Skill>> getAllSkills(){
         List<Skill> skills=skillRepo.findAll();
         return new ResponseEntity<>(skills, HttpStatus.OK);
     }
+
+    //Get data for the bar chart to be plotted. label is the parameter for which the graph is generated eg institute, skills, etc.
+
     @GetMapping("/chart/bar/{label}")
     public ResponseEntity<Chart> getChartBarData(@PathVariable("label") String label){
         Chart chart=new Chart();
@@ -98,6 +107,9 @@ public class InfoController {
         return new ResponseEntity<>(chart, HttpStatus.OK);
 
     }
+
+    //Get data for the pie chart to be plotted. label is the parameter for which the graph is generated eg institute, skills, etc.
+
     @GetMapping("/chart/pie/{label}")
     public ResponseEntity<Chart> getChartPieData(@PathVariable("label") String label){
         Chart chart=new Chart();

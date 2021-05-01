@@ -5,6 +5,9 @@ import java.io.Serializable;
 
 @Entity
 public class Skill implements Serializable {
+
+    //Skill table generates skill table in DB with fields id and name
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

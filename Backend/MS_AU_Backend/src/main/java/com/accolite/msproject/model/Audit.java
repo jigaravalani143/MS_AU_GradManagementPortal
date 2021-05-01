@@ -5,6 +5,10 @@ import java.sql.Date;
 
 @Entity
 public class Audit {
+
+    //Audit class creates a table with fields id,date,username,userEmail,oldvalues,newvalues,operations
+    //provides getter and setter
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;

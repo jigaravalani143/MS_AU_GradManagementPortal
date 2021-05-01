@@ -6,6 +6,8 @@ import java.io.Serializable;
 
 @Entity
 public class Institute implements Serializable {
+    //Institute class generates a table named institute in DB with fields id and name
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

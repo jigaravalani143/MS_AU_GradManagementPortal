@@ -6,17 +6,17 @@
             <div>
             <mat-form-field appearance="fill">
               <mat-label>Select Parameter</mat-label>
-              <mat-select [(ngModel)]="selectedParam" name="food">
+              <mat-select [(ngModel)]="selectedParam" name="food" (selectionChange)="onShow()">
                 <mat-option *ngFor="let op of xParamOptions" [value]="op">
                   {{op}}
                 </mat-option>
               </mat-select>
             </mat-form-field>
         </div>
-            <div class=" marbtn"mat-dialog-actions>
+            <!-- <div class=" marbtn"mat-dialog-actions>
               
                 <button mat-raised-button color="warn" (click)="onShow()" type="submit">Submit</button>
-              </div>
+              </div> -->
             </div>
           
     </form>

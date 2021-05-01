@@ -20,10 +20,14 @@ public class AuditServiceImpl implements AuditService {
     @Autowired
     AuditRepo auditRepo;
 
+    //Method to get all the logs from audit table
+
     @Override
     public List<Audit> getAllAudit() {
         return auditRepo.findAll();
     }
+
+    //Method to insert log entry in audit table using jdbc update statement
 
     @Override
     public int insertAudit(Audit audit) {

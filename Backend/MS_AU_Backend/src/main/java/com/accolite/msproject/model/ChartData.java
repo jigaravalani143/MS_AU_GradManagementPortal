@@ -5,6 +5,9 @@ import java.math.BigDecimal;
 import java.util.List;
 
 public class ChartData implements Serializable {
+    //chartData retrieves the data and label to be plotted by chart
+    //"chartData":{"label":"Graduates","data":[20,20,20,20,20]}
+
     String label;
     List<BigDecimal> data;
 

@@ -18,6 +18,7 @@ public class GradServiceImpl implements GradService {
         this.gradRepo = gradRepo;
     }
 
+//Add grad to repo
 
     @Override
     public Grad addGrad(Grad grad) {
@@ -26,20 +27,28 @@ public class GradServiceImpl implements GradService {
         return gradRepo.save(grad);
     }
 
+   //list of all grads from the grad repo
+
     @Override
     public List<Grad> findAllGrads() {
         return gradRepo.findAll();
     }
+
+   //update grad in the grad repo
 
     @Override
     public Grad updateGrad(Grad grad) {
         return gradRepo.save(grad);
     }
 
+    //delete grad based on id from grad repo
+
     @Override
     public void deleteById(Integer id) {
         gradRepo.deleteById(id);
     }
+
+    //find grad by its id from grad repo if not found throw custom exception
 
     @Override
     public Grad findGradById(Integer id) {
