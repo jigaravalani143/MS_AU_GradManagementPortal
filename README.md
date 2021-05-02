@@ -13,10 +13,10 @@
 - MySql
 
 ## Demo Video
-- [MS AU Grad Management Portal Demo Video](https://drive.google.com/file/d/1NekIK34j5sVjX4bOHpAIvwH5ZnoIxcOm/view?usp=sharing)
+- [MS AU Grad Management Portal Demo Video](https://drive.google.com/file/d/1jieXTA5GcaxMReqLcMWEv9RjtIJ3dJ3y/view?usp=sharing)
 
 ## Screenshots
-[Grad Management Portal Screenshots](GradManagement_ScreenShots.pdf)
+- [Grad Management Portal Screenshots](https://drive.google.com/file/d/1ITwrQUdazj4PwS9s78ZXJslSHF1fVpqS/view?usp=sharing)
 
 ## Installation Steps
 ## Frontend 
