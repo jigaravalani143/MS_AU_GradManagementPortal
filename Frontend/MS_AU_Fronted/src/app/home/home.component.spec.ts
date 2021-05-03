@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomeComponent } from './home.component';
+import { ActivatedRoute, Router } from '@angular/router';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -8,6 +9,7 @@ describe('HomeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      providers:[{ provide: Router, useValue: "/dashboard/home"}],
       declarations: [ HomeComponent ]
     })
     .compileComponents();
